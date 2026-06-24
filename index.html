@@ -517,7 +517,7 @@ function tokenizeKron(text) {
 // Загружает звук по имени 
 function loadSound(name) { 
   return new Promise((resolve, reject) => { 
-    const audio = new Audio(`sounds/${name}.mp3`); 
+    const audio = new Audio(`${name}.mp3`); 
     audio.addEventListener('canplaythrough', () => resolve(audio), {once: true}); 
     audio.addEventListener('error', () => reject(new Error(`Не найден звук: sounds/${name}.mp3`)), {once: true}); 
     audio.load(); 
